@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    }
+]

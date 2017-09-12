@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/3321bbbd7ef9e43c6891d60445c83730c0b72e80/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8f128aeeb7e31271b28a7adb9dac1f3a6ed9f5e7">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_46fafc62938f0f20e93ba930a68d917bd06f3f97.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/f2b5f31a6c206ca306d40acddd32be96710f1762/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8010ae6ed32828a145b25ec97bc07b7a83c6318f">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_32977f27cf7546ee822c091604a08759a111d8e5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/fbaa2ae8661217e0efd83cf667e2b7ab88d314b2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="8f83a631abfdb790591a720e0cfb5f41329831c3">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_fdc327473f59da1d68262dee4dca68df93505da5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_bca9e26b2a894f1d57860c353debf372852c5d09.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/aadd4c71d62b75c1a25bfed14d91f5fa16b1e2cf/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="0a534044236cf81b002604643d23e7ca56bd1ee0">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_d45e2bb2ea01b8bc98a88d0664e5963d1612c3e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_c9832ff39e7c270f3183ca354fb7097f211060ff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/6c731bab8f7f6b618d1d82e35ab2d4b9e505984e/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="69e74a8b1cbf5b8ee0fc0cca6bab1ac6c45efef8">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_61ffc1626c69d47656eb32647c916fee12cb1155.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/f638c9c45bbae453a4fb2cd5a647dd3e511d73fd/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="900a290779cdb4eb2e63b6f7806fd9f30ce4f60d">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_cb2416298647cd815a7b209a0696bba4a91dd804.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/davi/.android/build-cache/3ecb0537d13f9714e3c42c33d11e670b3d1623f7/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.0"
+        sha1="9ff5114aff3bfb387577ba92a11408dcf0441c24">
+        <dex dex="/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/pre-dexed/debug/classes_fefd8ac9628902e36d4500b7da12d990c9c32619.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1078082262613",
+    "firebase_url": "https://smdevasao.firebaseio.com",
+    "project_id": "smdevasao",
+    "storage_bucket": "smdevasao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1078082262613:android:a1d9dadac72f04ff",
+        "android_client_info": {
+          "package_name": "br.ufc.smdapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1078082262613-viilc86prv8fpv4ni9m88ngjoq11n8a5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBNbd7gtQeCpQAM1_blGhprilEKAtUQ19k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

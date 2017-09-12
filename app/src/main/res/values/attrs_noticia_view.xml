@@ -1,0 +1,6 @@
+<resources>
+    <declare-styleable name="NoticiaView">
+        <attr name="titulo" format="string"/>
+        <attr name="tipo" format="string"/>
+    </declare-styleable>
+</resources>

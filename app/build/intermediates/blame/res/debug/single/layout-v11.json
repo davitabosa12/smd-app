@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_media_action.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    }
+]

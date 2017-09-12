@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher_round.png",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]
