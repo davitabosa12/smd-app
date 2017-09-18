@@ -77,6 +77,7 @@ public class DeclaracaoActivity extends AppCompatActivity {
                 String assunto;
                 int status;
                 mListView.removeAllViewsInLayout();
+                views.clear();
                 mListView.setAdapter(adapter);
                 for (DataSnapshot value : dataSnapshot.getChildren()) {
                     assunto = value.child("titulo").getValue(String.class);
