@@ -1,6 +1,8 @@
 package br.ufc.smdapp;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
     ListView lvNoticias;
     FirebaseDatabase database;
     DatabaseReference ref;
+    SharedPreferences.Editor editor;
     View noticiaView;
+    SharedPreferences sharedPrefs;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
 
@@ -56,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.start_layout);
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        editor = sharedPrefs.edit();
+
         mAuth = FirebaseAuth.getInstance();
         mAuthStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -63,7 +71,13 @@ public class MainActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if(user != null){
                     //O usuário logou
-                    Toast.makeText(getApplicationContext(),"Logado como: " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                    editor.putString("userID", user.getUid());
+                    if(editor.commit())
+                        Log.d("SharedPreferences","Commit funcionou: " + user.getUid());
+                    else
+                        Toast.makeText(MainActivity.this, "Deu bode. :(", Toast.LENGTH_SHORT).show();
+
+                    Toast.makeText(getApplicationContext(),"Logado", Toast.LENGTH_SHORT).show();
                 } else {
                     //O usuário saiu
                     Toast.makeText(getApplicationContext(),"Usuario saiu.", Toast.LENGTH_SHORT).show();

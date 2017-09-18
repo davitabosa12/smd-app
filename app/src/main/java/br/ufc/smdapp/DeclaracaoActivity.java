@@ -1,6 +1,7 @@
 package br.ufc.smdapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
@@ -58,8 +59,7 @@ public class DeclaracaoActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                startActivity(new Intent(DeclaracaoActivity.this,EnviarDeclaracaoActivity.class));
             }
         });
         mostraDeclaracoes();
