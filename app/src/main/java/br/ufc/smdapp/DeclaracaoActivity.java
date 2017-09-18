@@ -2,7 +2,9 @@ package br.ufc.smdapp;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -36,20 +38,22 @@ public class DeclaracaoActivity extends AppCompatActivity {
     ListView mListView;
     DeclaracaoAdapter adapter;
     ArrayList<DeclaracaoView> views;
-
+    SharedPreferences sharedPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_declaracao);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String userID = sharedPrefs.getString("userID",null);
         views = new ArrayList<>();
 
         setSupportActionBar(toolbar);
         //Conectar ao banco de dados, no relacionamento "Declaracoes"
 
         database = FirebaseDatabase.getInstance();
-        ref = database.getReference("declaracoes");
+        ref = database.getReference("declaracoes/" + userID);
 
         //Pegar itens do layout incluido no XML
         mLayout = (ConstraintLayout) findViewById(R.id.include_content_declaracao);

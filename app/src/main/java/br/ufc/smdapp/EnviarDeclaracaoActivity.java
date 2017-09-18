@@ -109,6 +109,7 @@ public class EnviarDeclaracaoActivity extends AppCompatActivity {
         if (verificarCampos()) {
             salvarDadosDoFormulario();
             HashMap<String, Object> result = new HashMap<>();
+
             result.put("nome", bkNomeAluno);
             result.put("matricula", bkMatricula);
             result.put("professor", bkProf);
@@ -116,7 +117,7 @@ public class EnviarDeclaracaoActivity extends AppCompatActivity {
             result.put("justificativa", bkJustificativa);
             result.put("titulo", "Declaracao de Segunda Chamada");
             result.put("status", 0);
-            ref.child(userId).setValue(result).addOnCompleteListener(new OnCompleteListener<Void>() {
+            ref.child(userId).push().setValue(result).addOnCompleteListener(new OnCompleteListener<Void>() {
                 @Override
                 public void onComplete(@NonNull Task<Void> task) {
                     Toast.makeText(EnviarDeclaracaoActivity.this, "Upado no DB.", Toast.LENGTH_SHORT).show();

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 18 16:39:59 BRT 2017
+#Mon Sep 18 16:59:12 BRT 2017
 210.set=ANDROID_RESOURCE
 282.file=/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/resources-debug.ap_/res/drawable/abc_vector_test.xml
 14.set=ANDROID_RESOURCE
