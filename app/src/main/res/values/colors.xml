@@ -3,4 +3,10 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!-- CORES DE STATUS DE DECLARACAO
+    -->    <color name="preto">#000000</color>
+    <color name="lido">#3F51B5</color>
+    <color name="ok">#00B015</color>
+    <color name="nok">#C00015</color>
 </resources>

@@ -17,12 +17,32 @@
             </intent-filter>
         </activity>
 
-        <service
-            android:name=".MyFirebaseInstanceIdService">
+        <service android:name=".MyFirebaseInstanceIdService">
             <intent-filter>
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
             </intent-filter>
         </service>
+        <service
+            android:name=".SMDMessagingService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".DeclaracaoActivity"
+            android:label="@string/title_activity_declaracao"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NoticiasAgregadorActivity" />
+        <activity
+            android:name=".LerNoticiaActivity"
+            android:label="@string/title_activity_ler_noticia"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

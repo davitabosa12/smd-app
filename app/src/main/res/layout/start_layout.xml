@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Preferências" />
+
+    <Button
+        android:id="@+id/btn_ler_noticias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ler Notícias" />
+
+    <Button
+        android:id="@+id/btn_declaracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pedir Declaração" />
+
+    <Button
+        android:id="@+id/btn_ver_salas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Salas" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
+</LinearLayout>

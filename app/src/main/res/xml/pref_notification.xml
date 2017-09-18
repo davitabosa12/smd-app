@@ -1,0 +1,45 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- A 'parent' preference, which enables/disables child preferences (below)
+         when checked/unchecked. -->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="receber_notificacoes"
+        android:title="@string/receber_notificacoes" />
+    <PreferenceCategory android:title="@string/interesses_titulo">
+
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:dependency="receber_notificacoes"
+        android:key="topic_estagios"
+        android:title="@string/estagio" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="topic_oportunidades"
+        android:dependency="receber_notificacoes"
+        android:title="@string/oportunidades" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="topic_instituto"
+        android:dependency="receber_notificacoes"
+        android:title="@string/instituto"/>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="topic_eventos"
+        android:dependency="receber_notificacoes"
+        android:title="@string/eventos"/>
+        <RingtonePreference
+            android:defaultValue="content://settings/system/notification_sound"
+            android:key="ringtone_preference"
+            android:dependency="receber_notificacoes"
+            android:ringtoneType="notification"
+            android:title="Tom de Notificação" />
+    </PreferenceCategory>
+    <!-- Allows the user to choose a ringtone in the 'notification' category. -->
+    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+    <!-- NOTE: RingtonePreference's summary should be set to its value by the activity code. -->
+
+    <!-- NOTE: This preference will be enabled only when the checkbox above is checked. -->
+
+</PreferenceScreen>

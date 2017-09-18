@@ -37,10 +37,32 @@
             </intent-filter>
         </activity>
 
+        <service android:name="br.ufc.smdapp.MyFirebaseInstanceIdService" >
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
         <service
-            android:name="br.ufc.smdapp.NotificationService"
+            android:name="br.ufc.smdapp.SMDMessagingService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="br.ufc.smdapp.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name="br.ufc.smdapp.DeclaracaoActivity"
+            android:label="@string/title_activity_declaracao"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="br.ufc.smdapp.NoticiasAgregadorActivity" />
+        <activity
+            android:name="br.ufc.smdapp.LerNoticiaActivity"
+            android:label="@string/title_activity_ler_noticia"
+            android:theme="@style/AppTheme.NoActionBar" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"
@@ -52,6 +74,11 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <activity
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"

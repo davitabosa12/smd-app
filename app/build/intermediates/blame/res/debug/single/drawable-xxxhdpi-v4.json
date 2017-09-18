@@ -44,6 +44,10 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/drawable-xxxhdpi-v4/abc_ic_menu_selectall_mtrl_alpha.png"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/design_ic_visibility.png",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/drawable-xxxhdpi-v4/design_ic_visibility.png"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_015.png"
     },
@@ -66,6 +70,10 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/drawable-xxxhdpi-v4/abc_btn_radio_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/design_ic_visibility_off.png",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/drawable-xxxhdpi-v4/design_ic_visibility_off.png"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/abc_btn_check_to_on_mtrl_000.png",

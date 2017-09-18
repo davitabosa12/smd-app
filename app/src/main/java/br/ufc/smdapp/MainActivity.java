@@ -1,6 +1,7 @@
 package br.ufc.smdapp;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,7 +9,10 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,14 +36,92 @@ public class MainActivity extends AppCompatActivity {
     FirebaseDatabase database;
     DatabaseReference ref;
     View noticiaView;
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthStateListener;
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthStateListener);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        mAuth.removeAuthStateListener(mAuthStateListener);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        database = FirebaseDatabase.getInstance();
-        ref = database.getReference("noticia");
 
+        setContentView(R.layout.start_layout);
+        mAuth = FirebaseAuth.getInstance();
+        mAuthStateListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if(user != null){
+                    //O usuário logou
+                    Toast.makeText(getApplicationContext(),"Logado como: " + user.getDisplayName(), Toast.LENGTH_SHORT).show();
+                } else {
+                    //O usuário saiu
+                    Toast.makeText(getApplicationContext(),"Usuario saiu.", Toast.LENGTH_SHORT).show();
+                }
+            }
+        };
+       // database = FirebaseDatabase.getInstance();
+       // ref = database.getReference("noticia");
+        Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin;
+        //pegar botoes
+        btnPrefs = (Button) findViewById(R.id.btn_settings);
+        btnLogin = (Button) findViewById(R.id.btn_login);
+        btnDeclaracoes = (Button) findViewById(R.id.btn_declaracao);
+        btnNoticias = (Button) findViewById(R.id.btn_ler_noticias);
+
+        btnPrefs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signInAnonymously();
+            }
+        });
+
+        btnDeclaracoes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),DeclaracaoActivity.class));
+            }
+        });
+
+        btnNoticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),NoticiasAgregadorActivity.class));
+            }
+        });
+
+
+
+        //Iniciar serviços do FCM
+        startService(new Intent(this, MyFirebaseInstanceIdService.class));
+        startService(new Intent(this, SMDMessagingService.class));
+
+
+
+
+
+
+
+    }
+
+    /*public void showNews(){
         lvNoticias = (ListView) findViewById(R.id.lv_noticias);
         adapter = new NoticiaAdapter(getApplicationContext(),mNoticias);
         lvNoticias.setAdapter(adapter);
@@ -67,11 +149,5 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-
-
-
-    }
-
-
+    }*/
 }

@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:2:1-48:12
 	package
 		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:3:5-28
 		INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml
@@ -14,12 +14,16 @@ ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:
 		INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml
 		INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml
 application
-ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:5:5-24:19
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:5:5-46:19
 MERGED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:19:5-29:19
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/davi/.android/build-cache/d9bb70b440b78a065167f590e8ca279415dfa278/output/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:10.0.1] /home/davi/.android/build-cache/f83b74e6bbad6c5c06abf590479384c0117ead7d/output/AndroidManifest.xml:19:5-20:19
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:18:5-20:19
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:26:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/davi/.android/build-cache/d9bb70b440b78a065167f590e8ca279415dfa278/output/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:26:5-20
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/davi/.android/build-cache/747a81cb0755b5995a45c702537d7a9f07dc63d1/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:10.0.1] /home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/AndroidManifest.xml:24:5-33:19
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/AndroidManifest.xml:24:5-28:19
@@ -59,24 +63,71 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:16:17-77
 	android:name
 		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:16:27-74
-service#br.ufc.smdapp.NotificationService
-ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:20:9-23:47
-	android:enabled
-		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:22:13-35
-	android:exported
-		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:23:13-36
+service#br.ufc.smdapp.MyFirebaseInstanceIdService
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:20:9-24:19
 	android:name
-		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:21:13-48
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:20:18-61
+intent-filter#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:21:13-23:29
+action#com.google.firebase.INSTANCE_ID_EVENT
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:22:17-80
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:22:25-77
+service#br.ufc.smdapp.SMDMessagingService
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:25:9-32:19
+	android:enabled
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:27:13-35
+	android:exported
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:26:13-48
+intent-filter#com.google.firebase.MESSAGING_EVENT
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:29:13-31:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:30:17-78
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:30:25-75
+activity#br.ufc.smdapp.SettingsActivity
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:34:9-36:63
+	android:label
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:36:13-60
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:35:13-45
+activity#br.ufc.smdapp.DeclaracaoActivity
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:37:9-40:59
+	android:label
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:39:13-62
+	android:theme
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:40:13-56
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:38:13-47
+activity#br.ufc.smdapp.NoticiasAgregadorActivity
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:41:9-63
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:41:19-60
+activity#br.ufc.smdapp.LerNoticiaActivity
+ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:42:9-45:68
+	android:label
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:44:13-63
+	android:theme
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:45:13-56
+	android:name
+		ADDED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml:43:13-47
 uses-sdk
 INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] /home/davi/.android/build-cache/531bd66561574eb9dd05862755ec294440b0dd2f/output/AndroidManifest.xml:18:5-42
 MERGED from [com.google.firebase:firebase-database:10.0.1] /home/davi/.android/build-cache/3321bbbd7ef9e43c6891d60445c83730c0b72e80/output/AndroidManifest.xml:3:5-42
 MERGED from [com.google.firebase:firebase-database-connection:10.0.1] /home/davi/.android/build-cache/f2b5f31a6c206ca306d40acddd32be96710f1762/output/AndroidManifest.xml:3:5-42
 MERGED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/davi/.android/build-cache/d9bb70b440b78a065167f590e8ca279415dfa278/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth:10.0.1] /home/davi/.android/build-cache/f83b74e6bbad6c5c06abf590479384c0117ead7d/output/AndroidManifest.xml:17:5-42
+MERGED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:17:5-42
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:21:5-23:62
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/davi/.android/build-cache/d9bb70b440b78a065167f590e8ca279415dfa278/output/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/davi/.android/build-cache/747a81cb0755b5995a45c702537d7a9f07dc63d1/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:10.0.1] /home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/AndroidManifest.xml:17:5-42
@@ -91,7 +142,7 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/davi/.andr
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/davi/.android/build-cache/a2250e1ca666bb7ab3dc7d4c59ffbf7e7619c18b/output/AndroidManifest.xml:21:5-23:61
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/davi/.android/build-cache/2d3442d8af93686555c48bfcae2d3e45fb01b8ce/output/AndroidManifest.xml:21:5-23:58
 	tools:overrideLibrary
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:23:9-75
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:23:9-59
 	android:targetSdkVersion
 		INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml
 		INJECTED from /home/davi/SMDEvasao/android/SMDApp/app/src/main/AndroidManifest.xml
@@ -104,18 +155,21 @@ ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/b
 		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:23:88-111
 	android:name
 		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:23:18-87
-intent-filter#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:24:13-26:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:24:28-51
-action#com.google.firebase.MESSAGING_EVENT
-ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:25:17-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:19:86-145
 	android:name
-		ADDED from [com.google.firebase:firebase-messaging:10.0.1] /home/davi/.android/build-cache/1a8ef8451122422bb07a1c146079a67a2435b5a9/output/AndroidManifest.xml:25:25-75
+		ADDED from [com.google.android.gms:play-services-base:10.0.1] /home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/AndroidManifest.xml:19:19-85
 meta-data#android.support.VERSION
-ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:25:5-27:41
+ADDED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/davi/.android/build-cache/fb2d79021d3a182dfd8cc7fe77914006af821593/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/davi/.android/build-cache/521cdec2c5419952d03a6a9f58659b39361a96bb/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/davi/.android/build-cache/79bd8ff684b998fb14e5285dabd16a45d2f4d4b8/output/AndroidManifest.xml:25:5-27:41
@@ -123,9 +177,9 @@ MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/davi/.andr
 MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/davi/.android/build-cache/a2250e1ca666bb7ab3dc7d4c59ffbf7e7619c18b/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/davi/.android/build-cache/2d3442d8af93686555c48bfcae2d3e45fb01b8ce/output/AndroidManifest.xml:25:5-27:41
 	android:value
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:27:9-38
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:27:9-38
 	android:name
-		ADDED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:26:9-47
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/AndroidManifest.xml:26:9-47
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-analytics:10.0.1] /home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/AndroidManifest.xml:20:5-66
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/AndroidManifest.xml:20:5-66
@@ -224,14 +278,6 @@ ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-c
 		ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:44:83-106
 	android:name
 		ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:44:18-82
-intent-filter#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:45:13-47:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:45:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:46:17-79
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:10.0.1] /home/davi/.android/build-cache/d3c453a529c52917e52f1802efa885d502985a61/output/AndroidManifest.xml:46:25-77
 provider#com.google.firebase.provider.FirebaseInitProvider
 ADDED from [com.google.firebase:firebase-common:10.0.1] /home/davi/.android/build-cache/d4ef1a08c5bc85849cedc0b13c19bb859780bd12/output/AndroidManifest.xml:6:9-194
 	android:authorities

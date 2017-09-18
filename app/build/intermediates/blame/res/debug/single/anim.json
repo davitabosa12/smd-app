@@ -4,6 +4,10 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/anim/abc_slide_out_bottom.xml"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/anim/abc_popup_enter.xml"
     },
@@ -24,6 +28,14 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/anim/abc_slide_in_top.xml"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/anim/design_snackbar_out.xml"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/anim/abc_grow_fade_in_from_bottom.xml"
     },
@@ -38,5 +50,9 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/anim/design_bottom_sheet_slide_in.xml"
     }
 ]
