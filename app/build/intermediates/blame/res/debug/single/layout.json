@@ -136,10 +136,6 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_action_mode_close_item_material.xml"
     },
     {
-        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_forms_web.xml",
-        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_forms_web.xml"
-    },
-    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_noticias_agregador.xml",
         "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_noticias_agregador.xml"
     },

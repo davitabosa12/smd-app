@@ -59,7 +59,7 @@ public class NoticiasAgregadorActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Noticia n = (Noticia) lvNoticias.getItemAtPosition(i);
-                //TODO: startActivity com a noticia
+
                 Intent intent = new Intent(getApplicationContext(), LerNoticiaActivity.class);
                 //enviar extras pro novo Intent
                 intent.putExtra("TITULO",n.getTitulo());
