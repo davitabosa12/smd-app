@@ -43,7 +43,7 @@
             android:name=".LerNoticiaActivity"
             android:label="@string/title_activity_ler_noticia"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".EnviarDeclaracaoActivity"></activity>
+        <activity android:name=".EnviarDeclaracaoActivity" />
     </application>
 
 </manifest>

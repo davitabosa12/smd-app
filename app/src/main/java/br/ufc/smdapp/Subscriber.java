@@ -24,6 +24,7 @@ public class Subscriber{
         this.fm = fm;
         topics = ctx.getResources().getStringArray(R.array.topicos);
         topicsToSubscribe = new ArrayList<>();
+        topicstoUnsubscribe = new ArrayList<>();
         Log.d("SUBSCRIBER","Instancia de Subscriber criada com sucesso!");
         Log.d("SUBSCRIBER", "fm = " + fm.toString() + " ctx= " + ctx.toString());
     }
