@@ -24,6 +24,7 @@ MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:26:5-20
 MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/47a80615c952ff0321121c0482a8313300248388/output/AndroidManifest.xml:26:5-20
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/davi/.android/build-cache/747a81cb0755b5995a45c702537d7a9f07dc63d1/output/AndroidManifest.xml:5:5-20
 MERGED from [com.google.firebase:firebase-analytics:10.0.1] /home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/AndroidManifest.xml:24:5-33:19
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/AndroidManifest.xml:24:5-28:19
@@ -130,8 +131,9 @@ MERGED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/47a80615c952ff0321121c0482a8313300248388/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-core:10.0.1] /home/davi/.android/build-cache/747a81cb0755b5995a45c702537d7a9f07dc63d1/output/AndroidManifest.xml:4:5-42
 MERGED from [com.google.firebase:firebase-analytics:10.0.1] /home/davi/.android/build-cache/d9ef61abbea91e1cbd0f74c539d3747b675dbfb9/output/AndroidManifest.xml:17:5-42
 MERGED from [com.google.firebase:firebase-analytics-impl:10.0.1] /home/davi/.android/build-cache/74c9c582a6931d3ccdbd081278381ccd491380ab/output/AndroidManifest.xml:17:5-42
@@ -172,8 +174,9 @@ ADDED from [com.android.support:design:26.0.0-alpha1] /home/davi/.android/build-
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/cbd8481269c443b6e25cdcf5db0039dab936dc70/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/davi/.android/build-cache/b23245a42533263eb73bdc11754edb66e018065e/output/AndroidManifest.xml:22:5-24:41
-MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:transition:26.0.0-alpha1] /home/davi/.android/build-cache/3b35ef3222774a36853d704d1fb0ddbcca568541/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:cardview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/47a80615c952ff0321121c0482a8313300248388/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/davi/.android/build-cache/0d75e4df9dc1fc9ee13147147e922daca6757170/output/AndroidManifest.xml:22:5-24:41
 MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/davi/.android/build-cache/fb2d79021d3a182dfd8cc7fe77914006af821593/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/davi/.android/build-cache/521cdec2c5419952d03a6a9f58659b39361a96bb/output/AndroidManifest.xml:25:5-27:41
 MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/davi/.android/build-cache/79bd8ff684b998fb14e5285dabd16a45d2f4d4b8/output/AndroidManifest.xml:25:5-27:41

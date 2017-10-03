@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
-        "source": "/home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/res/drawable/common_google_signin_btn_icon_dark.xml"
-    },
-    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_text_light_focused.xml",
         "source": "/home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/res/drawable/common_google_signin_btn_text_light_focused.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/common_google_signin_btn_icon_dark.xml",
+        "source": "/home/davi/.android/build-cache/6859b3a8672734b209c98040a78923e379ee57b8/output/res/drawable/common_google_signin_btn_icon_dark.xml"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/abc_btn_default_mtrl_shape.xml",
@@ -32,12 +32,12 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/drawable/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/ic_info_black_24dp.xml",
-        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/drawable/ic_info_black_24dp.xml"
-    },
-    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/abc_ic_arrow_drop_right_black_24dp.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/drawable/abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/ic_info_black_24dp.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/drawable/ic_info_black_24dp.xml"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/drawable/abc_seekbar_tick_mark_material.xml",

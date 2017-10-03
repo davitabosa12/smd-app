@@ -75,8 +75,9 @@ public class NotificationPusher {
                         .setSmallIcon(R.drawable.notification)
                         .setTicker("Uma nova noticia foi publicada!")
                         .setContentIntent(PendingIntent.getActivity(ctx,0,intent,PendingIntent.FLAG_CANCEL_CURRENT))
-                        .setContentText(desc.length() > 29 ? desc.substring(0,29) : desc) //limitar descricao para 30 caracteres
-                        .setDefaults(Notification.DEFAULT_SOUND | Notification.DEFAULT_VIBRATE) //TODO: Deixar o usuario escolher seu som de notificacao
+                        .setSound(Uri.parse(uri))
+                        .setContentText(desc.length() > 29 ? desc.substring(0,29) + "..." : desc) //limitar descricao para 30 caracteres
+                        .setDefaults(Notification.DEFAULT_VIBRATE) //TODO: Deixar o usuario escolher seu som de notificacao
                         .build();
 
                 nm.notify(new Random(Calendar.getInstance().getTimeInMillis()).nextInt(), noti);
