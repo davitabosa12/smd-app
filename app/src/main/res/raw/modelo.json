@@ -1,0 +1,20 @@
+{
+  "titulo" : "Nome do formulario",
+  "campos" : [
+    {
+      "nome" : "Nome do campo",
+      "hint" : "hint do campo"
+      "tipo" : "string"
+    },
+    {
+      "nome" : "Nome do campo",
+      "hint" : "hint do campo",
+      "tipo" : "num"
+    },
+    {
+      "nome" : "Nome do campo",
+      "hint" : "hint do campo",
+      "tipo" : "bool"
+    }
+  ]
+}

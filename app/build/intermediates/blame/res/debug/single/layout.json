@@ -76,6 +76,10 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_teste_formulario.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_teste_formulario.xml"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_action_menu_layout.xml"
     },
@@ -90,10 +94,6 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_main.xml"
-    },
-    {
-        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_enviar_declaracao.xml",
-        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_enviar_declaracao.xml"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/design_text_input_password_icon.xml",
@@ -258,5 +258,9 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_segunda_chamada_declaracao.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_segunda_chamada_declaracao.xml"
     }
 ]
