@@ -63,8 +63,12 @@
             android:name="br.ufc.smdapp.LerNoticiaActivity"
             android:label="@string/title_activity_ler_noticia"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="br.ufc.smdapp.SegundaChamadaDeclaracaoActivity" />
+        <activity
+            android:name="br.ufc.smdapp.SegundaChamadaDeclaracaoActivity"
+            android:theme="@style/Base.V7.Theme.AppCompat" />
         <activity android:name="br.ufc.smdapp.TesteFormulario" />
+        <activity android:name="br.ufc.smdapp.NovaDeclaracaoActivity" />
+        <activity android:name="br.ufc.smdapp.DeclaracaoFormularioActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

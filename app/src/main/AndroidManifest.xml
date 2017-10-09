@@ -43,8 +43,12 @@
             android:name=".LerNoticiaActivity"
             android:label="@string/title_activity_ler_noticia"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SegundaChamadaDeclaracaoActivity" />
-        <activity android:name=".TesteFormulario"></activity>
+        <activity
+            android:name=".SegundaChamadaDeclaracaoActivity"
+            android:theme="@style/Base.V7.Theme.AppCompat" />
+        <activity android:name=".TesteFormulario" />
+        <activity android:name=".NovaDeclaracaoActivity" />
+        <activity android:name=".DeclaracaoFormularioActivity"></activity>
     </application>
 
 </manifest>

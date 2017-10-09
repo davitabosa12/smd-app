@@ -164,6 +164,10 @@
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_activity_chooser_view.xml"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_declaracao_formulario.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_declaracao_formulario.xml"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/abc_popup_menu_header_item_layout.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_popup_menu_header_item_layout.xml"
     },
@@ -178,6 +182,10 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_nova_declaracao.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_nova_declaracao.xml"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

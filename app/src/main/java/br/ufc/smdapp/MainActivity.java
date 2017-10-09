@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
         btnDeclaracoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),DeclaracaoActivity.class));
+                startActivity(new Intent(getApplicationContext(),NovaDeclaracaoActivity.class));
             }
         });
 

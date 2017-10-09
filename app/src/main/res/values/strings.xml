@@ -60,6 +60,19 @@
         <item>3</item>
     </string-array>
 
+    <!-- TIPOS DE DECLARACAO -->
+    <string-array name="tipos_declaracao">
+        <item>Requisição de Segunda Chamada</item> <!--[0]-->
+        <item>Trancamento Total</item>             <!--[1]-->
+    </string-array>
+
+    <!-- ARRAYS DE DECLARACAO -->
+    <string-array name="motivo_trancamento_total">
+        <item>Mudança de domicílio</item>
+        <item>Exercício de emprego</item>
+        <item>Obrigação de ordem</item>
+    </string-array>
+
     <string-array name="multi_select_list_preference_default_value" />
 
     <string name="pref_title_system_sync_settings">System sync settings</string>

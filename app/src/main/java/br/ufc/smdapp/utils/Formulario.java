@@ -1,7 +1,8 @@
 package br.ufc.smdapp.utils;
 
 import android.content.Context;
-import android.text.Layout;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -13,7 +14,6 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by davi on 07/10/17.
@@ -23,23 +23,21 @@ public class Formulario {
     private Context mContext; //Context do Formulario
     private ArrayList<View> items; //Itens do formulario
     private ArrayList<String> names;
-    private Button teste;
+    private String formName; //Titulo do Formulario
+    private Button submit;
 
     public Formulario(Context context){
         this.mContext = context;
         this.items = new ArrayList<>();
         this.names = new ArrayList<>();
-        teste = new Button(mContext);
-        teste.setText("Enviar");
-        teste.setOnClickListener(new View.OnClickListener() {
+        this.formName ="Formulario Genérico";
+        submit = new Button(mContext);
+        submit.setText("Enviar");
+        submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                HashMap<String,String> map = getForm();
-                String temp = "";
-                for(String value : map.values()){
-                    temp = temp + value + " ";
-                }
-                Toast.makeText(mContext,temp,Toast.LENGTH_LONG).show();
+
+                Toast.makeText(mContext,"Button action has not been set.",Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -67,12 +65,12 @@ public class Formulario {
 
     }
     public void display(ViewGroup viewGroup){
+        ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.WRAP_CONTENT);
         for (View v: items) {
-            ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
-                                                                       ViewGroup.LayoutParams.WRAP_CONTENT);
             viewGroup.addView(v,params);
         }
-        viewGroup.addView(teste);
+        viewGroup.addView(submit,params);
     }
 
     public HashMap<String,String> getForm(){
@@ -94,7 +92,14 @@ public class Formulario {
         }
         return result;
     }
-
-
+    public void setAction(View.OnClickListener listener){
+        submit.setOnClickListener(listener);
+    }
+    public String getFormName(){
+        return formName;
+    }
+    public void setFormName(String newFormName){
+        this.formName= newFormName;
+    }
 
 }
