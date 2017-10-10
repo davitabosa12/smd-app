@@ -64,6 +64,10 @@
         "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/layout/design_navigation_menu_item.xml"
     },
     {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_verificar_usuario.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_verificar_usuario.xml"
+    },
+    {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/home/davi/.android/build-cache/cdd5966a257853fefff318082eabcf4577e72173/output/res/layout/design_navigation_item_header.xml"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_cadastrar_usuario.xml",
+        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_cadastrar_usuario.xml"
     },
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_teste_formulario.xml",

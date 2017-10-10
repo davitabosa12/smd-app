@@ -107,7 +107,7 @@ public class SegundaChamadaDeclaracaoActivity extends AppCompatActivity {
             HashMap<String, Object> result = new HashMap<>();
 
             result.put("nome", bkNomeAluno);
-            result.put("matricula", bkMatricula);
+            result.put("mMatricula", bkMatricula);
             //result.put("professor", bkProf);
             result.put("prova", bkProva);
             result.put("justificativa", bkJustificativa);

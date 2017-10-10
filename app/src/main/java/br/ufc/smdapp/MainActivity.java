@@ -76,12 +76,13 @@ public class MainActivity extends AppCompatActivity {
         };
        // database = FirebaseDatabase.getInstance();
        // ref = database.getReference("noticia");
-        Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin;
+        Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin,btnCadastro;
         //pegar botoes
         btnPrefs = (Button) findViewById(R.id.btn_settings);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnDeclaracoes = (Button) findViewById(R.id.btn_declaracao);
         btnNoticias = (Button) findViewById(R.id.btn_ler_noticias);
+        btnCadastro = (Button) findViewById(R.id.btn_cadastrar);
 
         btnPrefs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +109,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),NoticiasAgregadorActivity.class));
+            }
+        });
+        btnCadastro.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),VerificarUsuarioActivity.class));
             }
         });
 

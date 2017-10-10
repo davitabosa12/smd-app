@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.ufc.smdapp">
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -48,7 +53,9 @@
             android:theme="@style/Base.V7.Theme.AppCompat" />
         <activity android:name=".TesteFormulario" />
         <activity android:name=".NovaDeclaracaoActivity" />
-        <activity android:name=".DeclaracaoFormularioActivity"></activity>
+        <activity android:name=".DeclaracaoFormularioActivity" />
+        <activity android:name=".VerificarUsuarioActivity" />
+        <activity android:name=".CadastrarUsuarioActivity"></activity>
     </application>
 
 </manifest>

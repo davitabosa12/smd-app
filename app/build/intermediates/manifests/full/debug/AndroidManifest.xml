@@ -8,6 +8,11 @@
         android:minSdkVersion="16"
         android:targetSdkVersion="26" />
 
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
     <meta-data
         android:name="android.support.VERSION"
         android:value="26.0.0-alpha1" /> <!-- Required permission for App measurement to run. -->
@@ -69,6 +74,8 @@
         <activity android:name="br.ufc.smdapp.TesteFormulario" />
         <activity android:name="br.ufc.smdapp.NovaDeclaracaoActivity" />
         <activity android:name="br.ufc.smdapp.DeclaracaoFormularioActivity" />
+        <activity android:name="br.ufc.smdapp.VerificarUsuarioActivity" />
+        <activity android:name="br.ufc.smdapp.CadastrarUsuarioActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

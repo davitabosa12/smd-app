@@ -22,7 +22,7 @@ public class TesteFormulario extends AppCompatActivity {
         formSegundaChamada = new Formulario(this);
         formSegundaChamada.addEditText("nome","Nome", InputType.TYPE_TEXT_VARIATION_PERSON_NAME);
         formSegundaChamada.addCheckBox("legal","Legal?");
-        formSegundaChamada.addEditText("matricula", "Matrícula", InputType.TYPE_NUMBER_VARIATION_NORMAL);
+        formSegundaChamada.addEditText("mMatricula", "Matrícula", InputType.TYPE_NUMBER_VARIATION_NORMAL);
         formSegundaChamada.display(layout);
     }
 }
