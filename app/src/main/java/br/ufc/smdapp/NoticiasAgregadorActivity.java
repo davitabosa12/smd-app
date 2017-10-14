@@ -10,6 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -42,26 +43,36 @@ public class NoticiasAgregadorActivity extends AppCompatActivity {
         ref = database.getReference("noticia");
         mNoticias = new ArrayList<>();
         lvNoticias = (ListView) findViewById(R.id.lv_noticias);
-
-        //Pegar dados utilizando o Firebase.
-        ref.addValueEventListener(new ValueEventListener() {
+        configuraRecycler();
+        ref.orderByKey().addChildEventListener(new ChildEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
                 String titulo,desc,tipo;
-                mNoticias.clear();
-                for (DataSnapshot data: dataSnapshot.getChildren()) {
-                    titulo = data.child("titulo").getValue(String.class);
-                    desc = data.child("descricao").getValue(String.class);
-                    tipo = data.child("tipo").getValue(String.class);
-                    mNoticias.add(new Noticia(titulo,desc,tipo));
-                }
-                configuraRecycler();
+                titulo = dataSnapshot.child("titulo").getValue(String.class);
+                desc = dataSnapshot.child("descricao").getValue(String.class);
+                tipo = dataSnapshot.child("tipo").getValue(String.class);
+                mNoticias.add(0,new Noticia(titulo,desc,tipo));
+                mAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
 
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(getApplicationContext(),"Ocorreu um erro: "+ databaseError.getMessage(),Toast.LENGTH_LONG).show();
+
             }
         });
         /*lvNoticias.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -96,4 +107,5 @@ public class NoticiasAgregadorActivity extends AppCompatActivity {
         }
 
     }
+
 }

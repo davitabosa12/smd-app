@@ -44,7 +44,7 @@ public class VerificarUsuarioActivity extends AppCompatActivity {
                 alunosRef.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot != null){
+                        if(dataSnapshot.exists()){
                             HashMap<String,Object> snap = (HashMap) dataSnapshot.getValue();
                             Log.d("Verificar usuario", "message "  + snap.toString());
                             String cpf = dataSnapshot.child("cpf").getValue(String.class);

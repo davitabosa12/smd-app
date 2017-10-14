@@ -274,9 +274,5 @@
     {
         "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/select_dialog_singlechoice_material.xml",
         "source": "/home/davi/.android/build-cache/4708740ebae68bcdd4109caabd8e569c45e89f63/output/res/layout/select_dialog_singlechoice_material.xml"
-    },
-    {
-        "merged": "/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/res/merged/debug/layout/activity_segunda_chamada_declaracao.xml",
-        "source": "/home/davi/SMDEvasao/android/SMDApp/app/src/main/res/layout/activity_segunda_chamada_declaracao.xml"
     }
 ]
