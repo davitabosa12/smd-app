@@ -3411,7 +3411,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f100070;
         public static final int action_mode_bar_stub=0x7f10006f;
         public static final int action_mode_close_button=0x7f100052;
-        public static final int action_settings=0x7f1000ce;
+        public static final int action_settings=0x7f1000cf;
         public static final int action_text=0x7f1000ad;
         public static final int actions=0x7f1000bb;
         public static final int activity_chooser_view_content=0x7f100053;
@@ -3431,6 +3431,7 @@ containing a value of this type.
         public static final int btn_declaracao=0x7f1000c6;
         public static final int btn_ler_noticias=0x7f1000c5;
         public static final int btn_login=0x7f1000c8;
+        public static final int btn_logout=0x7f1000c9;
         public static final int btn_prosseguir=0x7f100097;
         public static final int btn_settings=0x7f1000c4;
         public static final int btn_ver_salas=0x7f1000c7;
@@ -3497,7 +3498,7 @@ containing a value of this type.
         public static final int list_item=0x7f100057;
         public static final int lv_declaracoes_feitas=0x7f100099;
         public static final int lv_noticias=0x7f10008d;
-        public static final int masked=0x7f1000cd;
+        public static final int masked=0x7f1000ce;
         public static final int media_actions=0x7f1000b1;
         public static final int middle=0x7f100041;
         public static final int mini=0x7f10003f;
@@ -3569,7 +3570,7 @@ containing a value of this type.
         public static final int textSpacerNoButtons=0x7f100061;
         public static final int textSpacerNoTitle=0x7f100060;
         public static final int textView=0x7f100093;
-        public static final int textView4=0x7f1000ca;
+        public static final int textView4=0x7f1000cb;
         public static final int text_input_password_toggle=0x7f1000a6;
         public static final int textinput_counter=0x7f100009;
         public static final int textinput_error=0x7f10000a;
@@ -3585,9 +3586,9 @@ containing a value of this type.
         public static final int transition_current_scene=0x7f10000b;
         public static final int transition_layout_save=0x7f10000c;
         public static final int transition_scene_layoutid_cache=0x7f10000d;
-        public static final int txv_declaracao_titulo=0x7f1000c9;
+        public static final int txv_declaracao_titulo=0x7f1000ca;
         public static final int txv_previa=0x7f1000aa;
-        public static final int txv_status=0x7f1000cb;
+        public static final int txv_status=0x7f1000cc;
         public static final int txv_texto_noticia=0x7f10009a;
         public static final int txv_tipo=0x7f1000a8;
         public static final int txv_tipo_noticia=0x7f1000c3;
@@ -3596,7 +3597,7 @@ containing a value of this type.
         public static final int up=0x7f10000e;
         public static final int useLogo=0x7f100021;
         public static final int view_offset_helper=0x7f10000f;
-        public static final int visible=0x7f1000cc;
+        public static final int visible=0x7f1000cd;
         public static final int wide=0x7f10004b;
         public static final int withText=0x7f100048;
         public static final int wrap=0x7f100012;

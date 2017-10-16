@@ -12,4 +12,6 @@ public class RefBanco {
     public static String PENDENCIAS = "pendencias";
     public static String SERVICOS = "servicos";
     public static String SOLICITACOES = "solicitacoes";
+    public static String PEDIDO_INGRESSO = "pedidoIngresso";
+    public static String USERS = "users";
 }

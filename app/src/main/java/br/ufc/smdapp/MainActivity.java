@@ -28,7 +28,9 @@ import br.ufc.smdapp.utils.User;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin,btnCadastro;
+    Button btnNoticias, btnDeclaracoes, btnPrefs,
+            btnSalas, btnLogin, btnCadastro,
+            btnLogout, btnSolicitarAcesso;
     FirebaseDatabase database;
     DatabaseReference ref;
     SharedPreferences.Editor editor;
@@ -75,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                     //O usuário saiu
                     Toast.makeText(getApplicationContext(),"Usuario saiu.", Toast.LENGTH_SHORT).show();
                 }
+                verificarUsuario(mAuth);
             }
         };
 
@@ -86,8 +89,20 @@ public class MainActivity extends AppCompatActivity {
         btnNoticias = (Button) findViewById(R.id.btn_ler_noticias);
         btnCadastro = (Button) findViewById(R.id.btn_cadastrar);
         btnSalas = (Button) findViewById(R.id.btn_ver_salas);
+        btnLogout = (Button) findViewById(R.id.btn_logout);
+        btnSolicitarAcesso = (Button) findViewById(R.id.btn_solicitar_acesso);
 
-        btnSalas.setVisibility(View.GONE);
+       configBotoes();
+
+        verificarUsuario(mAuth);
+        //Iniciar serviços do FCM
+        startService(new Intent(this, MyFirebaseInstanceIdService.class));
+        startService(new Intent(this, SMDMessagingService.class));
+
+    }
+
+    private void configBotoes(){
+        btnSalas.setVisibility(View.GONE); //Nao suportado.
 
         btnPrefs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,19 +137,31 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(),CadastrarUsuarioActivity.class));
             }
         });
-
-
-        //Iniciar serviços do FCM
-        startService(new Intent(this, MyFirebaseInstanceIdService.class));
-        startService(new Intent(this, SMDMessagingService.class));
-
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mAuth.signOut();
+            }
+        });
+        btnSolicitarAcesso.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),VerificarUsuarioActivity.class));
+            }
+        });
     }
-
     private void verificarUsuario(FirebaseAuth auth){
         FirebaseUser user = auth.getCurrentUser();
         //Se o usuario nao existir
         if(user == null){
             auth.signInAnonymously();
+            btnDeclaracoes.setVisibility(View.GONE);
+            //mostrar o botao de cadastro
+            btnCadastro.setVisibility(View.VISIBLE);
+            //mostrar botao de login
+            btnLogin.setVisibility(View.VISIBLE);
+            btnLogout.setVisibility(View.GONE);
+
         }
         //Se o usuario for anonimo
         else if(user.isAnonymous()){
@@ -144,45 +171,49 @@ public class MainActivity extends AppCompatActivity {
             btnCadastro.setVisibility(View.VISIBLE);
             //mostrar botao de login
             btnLogin.setVisibility(View.VISIBLE);
+            btnLogout.setVisibility(View.GONE);
         }
         //O usuario esta cadastrado
         else{
             btnCadastro.setVisibility(View.GONE);
             btnLogin.setVisibility(View.GONE);
-            btnDeclaracoes.setVisibility(View.GONE);
             String uid = user.getUid();
             if(uid.equals("")) Log.d("DADOS"," uid vazio. Pegar dados do BD pode ser uma pessima ideia :|");
-            DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users/" + uid);
-            usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-                    //Se o usuario foi confirmado pela secretaria
-                    if( (boolean) dataSnapshot.child(User.CONFIRMADO_SECRETARIA).getValue() ){
-                        //mostrar botao de pedir declaracao
-                        btnDeclaracoes.setVisibility(View.VISIBLE);
-                    }
-                    else if( (boolean) dataSnapshot.child(User.ENVIADO_PEDIDO).getValue()){
-                        //Se o usuario enviou pedido para secretaria
-                        //mostrar botao de status de confirmacao de cadastro
-                        //TODO: Activity que mostra o status para usuario
-                    }
-                    else {
-                        //O usuario esta cadastrado, mas nao enviou pedido para a secretaria
-                        //mostrar botao de enviar pedido para poder fazer solicitacoes
-                        //TODO: Modificar a Activity VerificarUsuariosActivity
-                    }
-
-
-                }
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-
-                }
-            }); //listener
+            seCoordenacaoPermitiu(uid);
         } //else Usuario esta cadastrado
 
 
+    }
+
+    private void seCoordenacaoPermitiu(String uid){
+        DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users/" + uid);
+        usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //Se o usuario foi confirmado pela secretaria
+                if( (boolean) dataSnapshot.child(User.CONFIRMADO_SECRETARIA).getValue() ){
+                    //mostrar botao de pedir declaracao
+                    btnDeclaracoes.setVisibility(View.VISIBLE);
+                }
+                else if( (boolean) dataSnapshot.child(User.ENVIADO_PEDIDO).getValue()){
+                    //Se o usuario enviou pedido para secretaria
+                    //mostrar botao de status de confirmacao de cadastro
+                    //TODO: Activity que mostra o status para usuario
+                }
+                else {
+                    //O usuario esta cadastrado, mas nao enviou pedido para a secretaria
+                    //mostrar botao de enviar pedido para poder fazer solicitacoes
+                    //TODO: Modificar a Activity VerificarUsuariosActivity
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        }); //listener
     }
 
 }
