@@ -1,5 +1,6 @@
 package br.ufc.smdapp;
 
+import android.app.ActionBar;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -25,21 +26,20 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference usersRef;
     Button btnCadastrar;
-    EditText edtEmail, edtSenha, edtSenhaConfima;
+    EditText edtEmail, edtSenha, edtSenhaConfima, edtNome;
     String matricula;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_usuario);
         setTitle("Cadastro");
-
-        Bundle extras = getIntent().getExtras();
-        matricula = extras.getString("MATRICULA");
+        ActionBar bar = getActionBar();
+        bar.setHomeButtonEnabled(true);
 
         auth = FirebaseAuth.getInstance();
         usersRef = FirebaseDatabase.getInstance().getReference("users/" + matricula);
 
-
+        edtNome  = (EditText) findViewById(R.id.edt_nome);
         edtEmail = (EditText) findViewById(R.id.edt_email);
         edtSenha = (EditText) findViewById(R.id.edt_senha);
         edtSenhaConfima = (EditText) findViewById(R.id.edt_senha_confirmacao);
@@ -67,6 +67,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                     HashMap<String,Object> dados = new HashMap<String, Object>();
                     dados.put("uid",uid);
                     dados.put("cadastrado",true);
+                    dados.put("confirmadoSecretaria",false);
                     usersRef.setValue(dados).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

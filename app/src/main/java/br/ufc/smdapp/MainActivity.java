@@ -15,20 +15,21 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
-    ArrayList<Noticia> mNoticias = new ArrayList<>();
-    ArrayAdapter adapter;
-    ListView lvNoticias;
+    Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin,btnCadastro;
     FirebaseDatabase database;
     DatabaseReference ref;
     SharedPreferences.Editor editor;
-    View noticiaView;
     SharedPreferences sharedPrefs;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthStateListener;
@@ -65,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                     if(editor.commit())
                         Log.d("SharedPreferences","Commit funcionou: " + user.getUid());
                     else
-                        Toast.makeText(MainActivity.this, "Deu bode. :(", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "Commit Falhou.", Toast.LENGTH_SHORT).show();
 
                     Toast.makeText(getApplicationContext(),"Logado", Toast.LENGTH_SHORT).show();
                 } else {
@@ -74,15 +75,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
-       // database = FirebaseDatabase.getInstance();
-       // ref = database.getReference("noticia");
-        Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin,btnCadastro;
+
+
         //pegar botoes
         btnPrefs = (Button) findViewById(R.id.btn_settings);
         btnLogin = (Button) findViewById(R.id.btn_login);
         btnDeclaracoes = (Button) findViewById(R.id.btn_declaracao);
         btnNoticias = (Button) findViewById(R.id.btn_ler_noticias);
         btnCadastro = (Button) findViewById(R.id.btn_cadastrar);
+        btnSalas = (Button) findViewById(R.id.btn_ver_salas);
+
+        btnSalas.setVisibility(View.GONE);
 
         btnPrefs.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -114,51 +117,62 @@ public class MainActivity extends AppCompatActivity {
         btnCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),VerificarUsuarioActivity.class));
+                startActivity(new Intent(getApplicationContext(),CadastrarUsuarioActivity.class));
             }
         });
-
 
 
         //Iniciar serviços do FCM
         startService(new Intent(this, MyFirebaseInstanceIdService.class));
         startService(new Intent(this, SMDMessagingService.class));
 
+    }
+
+    private void verificarUsuario(FirebaseAuth auth){
+        FirebaseUser user = auth.getCurrentUser();
+        //Se o usuario existir
+        if(user == null){
+            auth.signInAnonymously();
+        }
+        //Se o usuario for anonimo
+        else if(user.isAnonymous()){
+            //proibir de pedir declaracao
+            btnDeclaracoes.setVisibility(View.GONE);
+            //mostrar o botao de cadastro
+            btnCadastro.setVisibility(View.VISIBLE);
+            //mostrar botao de login
+            btnLogin.setVisibility(View.VISIBLE);
+        }
+        //O usuario esta cadastrado
+        else{
+            btnCadastro.setVisibility(View.GONE);
+            btnLogin.setVisibility(View.GONE);
+            String uid = user.getUid();
+            if(uid.equals("")) Log.d("DADOS"," uid vazio. Pegar dados do BD pode ser uma pessima ideia :|");
+            DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users/" + uid);
+            usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
+                    if( (boolean) dataSnapshot.child("confirmadoSecretaria").getValue() ){
+                        //mostrar botao de pedir declaracao
+                        btnDeclaracoes.setVisibility(View.VISIBLE);
+                    }
+                    else{
+                        //mostrar botao de status de confirmacao de cadastro
+                        //TODO: Activity que mostra o status para usuario
+                    }
 
 
+                }
 
+                @Override
+                public void onCancelled(DatabaseError databaseError) {
 
+                }
+            });
+        }
 
 
     }
 
-    /*public void showNews(){
-        lvNoticias = (ListView) findViewById(R.id.lv_noticias);
-        adapter = new NoticiaAdapter(getApplicationContext(),mNoticias);
-        lvNoticias.setAdapter(adapter);
-
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                for (DataSnapshot value : dataSnapshot.getChildren()) {
-                    Log.d(">>>NOTICIA:",value.getValue().toString());
-                    Noticia temp = new Noticia(value.child("titulo").getValue().toString(),
-                            value.child("descricao").getValue().toString(),
-                            value.child("tipo").getValue().toString()
-                    );
-
-                    //mNoticias.add(temp);
-                    adapter.add(temp);
-                }
-
-
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }*/
 }

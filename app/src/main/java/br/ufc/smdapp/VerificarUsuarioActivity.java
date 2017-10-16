@@ -17,6 +17,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
+import java.util.Objects;
+
+import br.ufc.smdapp.utils.ValidaCPF;
 
 public class VerificarUsuarioActivity extends AppCompatActivity {
     DatabaseReference alunosRef;
@@ -40,67 +43,18 @@ public class VerificarUsuarioActivity extends AppCompatActivity {
             public void onClick(View view) {
                 mMatricula = edtMatricula.getText().toString();
                 mCpf = edtCpf.getText().toString();
-                alunosRef = FirebaseDatabase.getInstance().getReference("alunos/" + mMatricula);
-                alunosRef.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.exists()){
-                            HashMap<String,Object> snap = (HashMap) dataSnapshot.getValue();
-                            Log.d("Verificar usuario", "message "  + snap.toString());
-                            String cpf = dataSnapshot.child("cpf").getValue(String.class);
-                            //cpf = retirarCaracteresInvalidosCPF(cpf);
-                            if(cpf.equals(mCpf)){
-                                Intent cadastrarUsuario = new Intent(getApplicationContext(),CadastrarUsuarioActivity.class);
-                                cadastrarUsuario.putExtra("MATRICULA",mMatricula);
-                                startActivity(cadastrarUsuario);
+                mCpf = ValidaCPF.removeCaracteresInvalidos(mCpf);
+                if(ValidaCPF.isCPF(mCpf)){
+                    //cpf ok, envia dados
+                    HashMap<String,Object> dados = new HashMap<String, Object>();
+                    dados.put("matricula",mMatricula);
+                    dados.put("cpf",mCpf);
+                    dados.put("","");
+                }
 
-                            }
-                            else{
-                                Toast.makeText(getApplicationContext(),"Os dados não conferem.",Toast.LENGTH_SHORT).show();
-                            }
-
-                        } //dataSnapshot != null
-                        else{
-                            new AlertDialog.Builder(getApplicationContext())
-                                    .setTitle("Matrícula não encontrada")
-                                    .setMessage("A Matricula informada não foi encontrada." +
-                                            "Se você acha isso um erro, entre em contato com a Secretaria.")
-                                    .setPositiveButton("Entendi",null)
-                                    .show();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(getApplicationContext(),"Erro de BD: " + databaseError.getMessage(),Toast.LENGTH_SHORT).show();
-                    }
-                });
             }
         });
 
-    }
-
-    private boolean cpfValido(String CPF){
-        if (CPF.equals("00000000000") || CPF.equals("11111111111") ||
-                CPF.equals("22222222222") || CPF.equals("33333333333") ||
-                CPF.equals("44444444444") || CPF.equals("55555555555") ||
-                CPF.equals("66666666666") || CPF.equals("77777777777") ||
-                CPF.equals("88888888888") || CPF.equals("99999999999") ||
-                (CPF.length() != 11))
-            return(false);
-        char[] cpfArray = CPF.toCharArray();
-        //TODO: Verificacao completa do CPF
-        return true;
-    }
-    private String retirarCaracteresInvalidosCPF(String CPF){
-        char[] cpfArray = CPF.toCharArray();
-        String result = "";
-        for(int i = 0; i < cpfArray.length; i++){
-            if(cpfArray[i] >='0' && cpfArray[i] <= '9'){
-                result += cpfArray[i];
-            }
-        }
-        return result;
     }
 
 
