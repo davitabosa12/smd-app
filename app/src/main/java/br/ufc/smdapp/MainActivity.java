@@ -24,6 +24,8 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import br.ufc.smdapp.utils.User;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btnNoticias, btnDeclaracoes, btnPrefs, btnSalas,btnLogin,btnCadastro;
@@ -153,13 +155,17 @@ public class MainActivity extends AppCompatActivity {
             usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    if( (boolean) dataSnapshot.child("confirmadoSecretaria").getValue() ){
+                    if( (boolean) dataSnapshot.child(User.CONFIRMADO_SECRETARIA).getValue() ){
                         //mostrar botao de pedir declaracao
                         btnDeclaracoes.setVisibility(View.VISIBLE);
                     }
-                    else{
+                    else if( (boolean) dataSnapshot.child(User.ENVIADO_PEDIDO).getValue()){
                         //mostrar botao de status de confirmacao de cadastro
                         //TODO: Activity que mostra o status para usuario
+                    }
+                    else {
+                        //mostrar botao de enviar pedido de fazer pedidos
+                        //TODO: Modificar a Activity VerificarUsuariosActivity
                     }
 
 
@@ -169,8 +175,8 @@ public class MainActivity extends AppCompatActivity {
                 public void onCancelled(DatabaseError databaseError) {
 
                 }
-            });
-        }
+            }); //listener
+        } //else Usuario esta cadastrado
 
 
     }

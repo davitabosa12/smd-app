@@ -22,6 +22,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import java.util.HashMap;
 import java.util.Objects;
 
+import br.ufc.smdapp.utils.User;
+
 public class CadastrarUsuarioActivity extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference usersRef;
@@ -54,7 +56,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
     }
     private void cadastro(){
-        String email = edtEmail.getText().toString();
+        final String email = edtEmail.getText().toString();
         String senha = edtSenha.getText().toString();
         String senhaConfirma = edtSenhaConfima.getText().toString();
         if(senhaConfirma.equals(senha)){ //Se as senhas digitadas forem iguais
@@ -65,10 +67,11 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                     authResult.getUser().sendEmailVerification();
                     String uid = authResult.getUser().getUid(); //pegar a id do usuario
                     HashMap<String,Object> dados = new HashMap<String, Object>();
-                    dados.put("uid",uid);
-                    dados.put("cadastrado",true);
-                    dados.put("confirmadoSecretaria",false);
-                    usersRef.setValue(dados).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    dados.put(User.UID,uid); //talvez nao precise dessa linha
+                    dados.put(User.ENVIADO_PEDIDO,false);
+                    dados.put(User.CONFIRMADO_SECRETARIA,false);
+                    dados.put(User.EMAIL,email);
+                    usersRef.child(uid).setValue(dados).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
                             if(task.isSuccessful())
