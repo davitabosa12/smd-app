@@ -132,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void verificarUsuario(FirebaseAuth auth){
         FirebaseUser user = auth.getCurrentUser();
-        //Se o usuario existir
+        //Se o usuario nao existir
         if(user == null){
             auth.signInAnonymously();
         }
@@ -149,22 +149,26 @@ public class MainActivity extends AppCompatActivity {
         else{
             btnCadastro.setVisibility(View.GONE);
             btnLogin.setVisibility(View.GONE);
+            btnDeclaracoes.setVisibility(View.GONE);
             String uid = user.getUid();
             if(uid.equals("")) Log.d("DADOS"," uid vazio. Pegar dados do BD pode ser uma pessima ideia :|");
             DatabaseReference usersRef = FirebaseDatabase.getInstance().getReference("users/" + uid);
             usersRef.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
+                    //Se o usuario foi confirmado pela secretaria
                     if( (boolean) dataSnapshot.child(User.CONFIRMADO_SECRETARIA).getValue() ){
                         //mostrar botao de pedir declaracao
                         btnDeclaracoes.setVisibility(View.VISIBLE);
                     }
                     else if( (boolean) dataSnapshot.child(User.ENVIADO_PEDIDO).getValue()){
+                        //Se o usuario enviou pedido para secretaria
                         //mostrar botao de status de confirmacao de cadastro
                         //TODO: Activity que mostra o status para usuario
                     }
                     else {
-                        //mostrar botao de enviar pedido de fazer pedidos
+                        //O usuario esta cadastrado, mas nao enviou pedido para a secretaria
+                        //mostrar botao de enviar pedido para poder fazer solicitacoes
                         //TODO: Modificar a Activity VerificarUsuariosActivity
                     }
 

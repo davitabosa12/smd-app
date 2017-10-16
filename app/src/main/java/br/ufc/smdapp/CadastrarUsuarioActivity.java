@@ -35,13 +35,10 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_usuario);
         setTitle("Cadastro");
-        ActionBar bar = getActionBar();
-        bar.setHomeButtonEnabled(true);
 
         auth = FirebaseAuth.getInstance();
-        usersRef = FirebaseDatabase.getInstance().getReference("users/" + matricula);
+        usersRef = FirebaseDatabase.getInstance().getReference("users");
 
-        edtNome  = (EditText) findViewById(R.id.edt_nome);
         edtEmail = (EditText) findViewById(R.id.edt_email);
         edtSenha = (EditText) findViewById(R.id.edt_senha);
         edtSenhaConfima = (EditText) findViewById(R.id.edt_senha_confirmacao);
@@ -56,9 +53,15 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
 
     }
     private void cadastro(){
+
         final String email = edtEmail.getText().toString();
         String senha = edtSenha.getText().toString();
         String senhaConfirma = edtSenhaConfima.getText().toString();
+        if(email.equals("")|| senha.equals("")|| senhaConfirma.equals("")){
+            Toast.makeText(getApplicationContext(),"Preencha todos os campos.",Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if(senhaConfirma.equals(senha)){ //Se as senhas digitadas forem iguais
             auth.createUserWithEmailAndPassword(email,senha).addOnSuccessListener(new OnSuccessListener<AuthResult>() {
                 @Override
@@ -67,10 +70,10 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                     authResult.getUser().sendEmailVerification();
                     String uid = authResult.getUser().getUid(); //pegar a id do usuario
                     HashMap<String,Object> dados = new HashMap<String, Object>();
-                    dados.put(User.UID,uid); //talvez nao precise dessa linha
-                    dados.put(User.ENVIADO_PEDIDO,false);
-                    dados.put(User.CONFIRMADO_SECRETARIA,false);
-                    dados.put(User.EMAIL,email);
+                    dados.put(User.UID, uid); //talvez nao precise dessa linha
+                    dados.put(User.ENVIADO_PEDIDO, false);
+                    dados.put(User.CONFIRMADO_SECRETARIA, false);
+                    dados.put(User.EMAIL, email);
                     usersRef.child(uid).setValue(dados).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
