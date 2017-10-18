@@ -44,7 +44,7 @@ public class NotificationPusher {
     public NotificationPusher(Context ctx){
         this.ctx = ctx;
     }
-    public void push(RemoteMessage message) {
+    public void pushNoticia(RemoteMessage message) {
 
         noticiaId = message.getData().get("pushId");
         DatabaseReference ref = FirebaseDatabase.getInstance().getReference("noticia/" + noticiaId);

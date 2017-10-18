@@ -1,11 +1,7 @@
 package br.ufc.smdapp;
 
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
 import android.util.Log;
 
-import com.google.firebase.messaging.FirebaseMessaging;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
@@ -33,6 +29,7 @@ public class SMDMessagingService extends FirebaseMessagingService {
 
         // Also if you intend on generating your own notifications as a result of a received FCM
         // message, here is where that should be initiated. See sendNotification method below.
-        new NotificationPusher(getApplicationContext()).push(remoteMessage);
+        //TODO: Diferenciar Noticias de Atualizacoes de Pendencias
+        new NotificationPusher(getApplicationContext()).pushNoticia(remoteMessage);
     }
 }

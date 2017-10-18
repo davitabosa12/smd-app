@@ -8,7 +8,11 @@ import android.text.Html;
  */
 
 public class Noticia {
-    //TODO: Transformar "tipo" em um enumerador
+    public static final int ESTAGIO = 1;
+    public static final int OPORTUNIDADES = 2;
+    public static final int INSTITUTO = 3;
+    public static final int EVENTOS = 4;
+
     private String titulo,desc,tipo;
     public Noticia(String titulo, String desc, String tipo){
         this.titulo = titulo;
