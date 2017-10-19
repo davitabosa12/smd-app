@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signInAnonymously();
+                startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             }
         });
 
@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity {
             btnDeclaracoes.setVisibility(View.GONE);
             //mostrar o botao de cadastro
             btnCadastro.setVisibility(View.VISIBLE);
+            btnSolicitarAcesso.setVisibility(View.GONE);
             //mostrar botao de login
             btnLogin.setVisibility(View.VISIBLE);
             btnLogout.setVisibility(View.GONE);
@@ -194,11 +195,13 @@ public class MainActivity extends AppCompatActivity {
                     //Se o usuario enviou pedido para secretaria
                     //mostrar botao de status de confirmacao de cadastro
                     //TODO: Activity que mostra o status para usuario
+                    btnSolicitarAcesso.setVisibility(View.GONE);
                 }
                 else {
                     //O usuario esta cadastrado, mas nao enviou pedido para a secretaria
                     //mostrar botao de enviar pedido para poder fazer solicitacoes
                     //TODO: Modificar a Activity VerificarUsuariosActivity
+                    btnSolicitarAcesso.setVisibility(View.VISIBLE);
                 }
 
 

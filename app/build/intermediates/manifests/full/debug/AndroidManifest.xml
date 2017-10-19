@@ -71,8 +71,9 @@
         <activity android:name="br.ufc.smdapp.TesteFormulario" />
         <activity android:name="br.ufc.smdapp.NovaDeclaracaoActivity" />
         <activity android:name="br.ufc.smdapp.DeclaracaoFormularioActivity" />
-        <activity android:name="br.ufc.smdapp.VerificarUsuarioActivity" />
+        <activity android:name="br.ufc.smdapp.PedidoAcessoActivity" />
         <activity android:name="br.ufc.smdapp.CadastrarUsuarioActivity" />
+        <activity android:name="br.ufc.smdapp.LoginActivity" />
         <!--
          FirebaseMessagingService performs security checks at runtime,
              no need for explicit permissions despite exported="true"

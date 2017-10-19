@@ -52,7 +52,8 @@
         <activity android:name=".NovaDeclaracaoActivity" />
         <activity android:name=".DeclaracaoFormularioActivity" />
         <activity android:name=".PedidoAcessoActivity" />
-        <activity android:name=".CadastrarUsuarioActivity"></activity>
+        <activity android:name=".CadastrarUsuarioActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>
