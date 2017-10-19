@@ -3651,7 +3651,7 @@ containing a value of this type.
         public static final int activity_noticias_agregador=0x7f040020;
         public static final int activity_nova_declaracao=0x7f040021;
         public static final int activity_teste_formulario=0x7f040022;
-        public static final int activity_verificar_usuario=0x7f040023;
+        public static final int activity_pedido_acesso =0x7f040023;
         public static final int antigoactivity_noticias_agregador=0x7f040024;
         public static final int content_declaracao=0x7f040025;
         public static final int content_ler_noticia=0x7f040026;

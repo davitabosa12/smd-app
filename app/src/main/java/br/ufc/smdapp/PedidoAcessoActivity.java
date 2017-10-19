@@ -3,7 +3,6 @@ package br.ufc.smdapp;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,7 +21,7 @@ import br.ufc.smdapp.utils.RefBanco;
 import br.ufc.smdapp.utils.User;
 import br.ufc.smdapp.utils.ValidaCPF;
 
-public class VerificarUsuarioActivity extends AppCompatActivity {
+public class PedidoAcessoActivity extends AppCompatActivity {
     DatabaseReference usersRef;
     Button btnProsseguir;
     EditText edtMatricula, edtCpf,edtNome;
@@ -32,7 +31,7 @@ public class VerificarUsuarioActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verificar_usuario);
+        setContentView(R.layout.activity_pedido_acesso);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         usersRef = FirebaseDatabase.getInstance().getReference(RefBanco.USERS);
         pedidoRef = FirebaseDatabase.getInstance().getReference(RefBanco.PEDIDO_INGRESSO);

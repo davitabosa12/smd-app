@@ -51,7 +51,7 @@
         <activity android:name=".TesteFormulario" />
         <activity android:name=".NovaDeclaracaoActivity" />
         <activity android:name=".DeclaracaoFormularioActivity" />
-        <activity android:name=".VerificarUsuarioActivity" />
+        <activity android:name=".PedidoAcessoActivity" />
         <activity android:name=".CadastrarUsuarioActivity"></activity>
     </application>
 
