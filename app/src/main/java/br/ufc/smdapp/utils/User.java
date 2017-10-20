@@ -12,5 +12,6 @@ public class User {
     public static String MATRICULA = "matricula";
     public static String CPF = "cpf";
     public static String EMAIL = "email";
+    public static String TOKEN_FCM = "tokenFCM";
 
 }

@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.iid.FirebaseInstanceId;
 
 import java.util.HashMap;
 import java.util.Objects;
@@ -74,6 +75,7 @@ public class CadastrarUsuarioActivity extends AppCompatActivity {
                     dados.put(User.ENVIADO_PEDIDO, false);
                     dados.put(User.CONFIRMADO_SECRETARIA, false);
                     dados.put(User.EMAIL, email);
+                    dados.put(User.TOKEN_FCM, FirebaseInstanceId.getInstance().getToken());
                     usersRef.child(uid).setValue(dados).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

@@ -1,4 +1,4 @@
-#Wed Oct 18 23:11:04 BRT 2017
+#Fri Oct 20 19:03:43 BRT 2017
 base.0=/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
 file.0=/home/davi/SMDEvasao/android/SMDApp/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

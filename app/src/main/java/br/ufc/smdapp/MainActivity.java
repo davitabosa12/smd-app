@@ -190,12 +190,14 @@ public class MainActivity extends AppCompatActivity {
                 if( (boolean) dataSnapshot.child(User.CONFIRMADO_SECRETARIA).getValue() ){
                     //mostrar botao de pedir declaracao
                     btnDeclaracoes.setVisibility(View.VISIBLE);
+                    btnSolicitarAcesso.setVisibility(View.GONE);
                 }
                 else if( (boolean) dataSnapshot.child(User.ENVIADO_PEDIDO).getValue()){
                     //Se o usuario enviou pedido para secretaria
                     //mostrar botao de status de confirmacao de cadastro
                     //TODO: Activity que mostra o status para usuario
                     btnSolicitarAcesso.setVisibility(View.GONE);
+                    btnDeclaracoes.setVisibility(View.GONE);
                 }
                 else {
                     //O usuario esta cadastrado, mas nao enviou pedido para a secretaria
